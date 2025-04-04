@@ -5,9 +5,9 @@ function toggleDeductions() {
     } else {
         deductionsSection.style.display = 'none';
     }
-  }
-  
-  function calculateTax() {
+}
+
+function calculateTax() {
     // Get input values
     const income = parseFloat(document.getElementById('income').value) || 0;
     const age = document.getElementById('age').value;
@@ -46,9 +46,9 @@ function toggleDeductions() {
     
     // Show results section
     document.getElementById('resultsSection').style.display = 'block';
-  }
-  
-  function calculateNewRegimeTax(income, isSalaried) {
+}
+
+function calculateNewRegimeTax(income, isSalaried) {
     const breakdown = [];
     let taxableIncome = income;
     
@@ -223,9 +223,9 @@ function toggleDeductions() {
         totalTax,
         breakdown
     };
-  }
-  
-  function calculateOldRegimeTax(income, age, isSalaried, deductions) {
+}
+
+function calculateOldRegimeTax(income, age, isSalaried, deductions) {
     const breakdown = [];
     let taxableIncome = income;
     
@@ -371,9 +371,9 @@ function toggleDeductions() {
         totalTax,
         breakdown
     };
-  }
-  
-  function generateBreakdownHTML(items) {
+}
+
+function generateBreakdownHTML(items) {
     let html = '';
     
     for (const item of items) {
@@ -387,12 +387,12 @@ function toggleDeductions() {
     }
     
     return html;
-  }
-  
-  function formatCurrency(amount) {
+}
+
+function formatCurrency(amount) {
     return '₹' + formatNumber(Math.round(amount));
-  }
-  
-  function formatNumber(num) {
+}
+
+function formatNumber(num) {
     return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
-  }
+}
